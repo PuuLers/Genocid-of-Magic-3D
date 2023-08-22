@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public GameObject ActiveRoom;
+
+
+
+
+
+
+
+
+
     void Start()
     {
         
