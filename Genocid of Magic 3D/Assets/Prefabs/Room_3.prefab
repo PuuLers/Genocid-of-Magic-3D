@@ -240,12 +240,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd3c913cb4cd00419b303e71c2b1b06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
   Points:
   - {fileID: 6556953969343834047}
   - {fileID: 7949571602116948330}
   - {fileID: 8154038703120200785}
-  NearestObject: {fileID: 0}
 --- !u!65 &9054541716792672656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -257,5 +255,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.593315, y: 1.6788044, z: 1.2076187}
-  m_Center: {x: 0, y: 0.66, z: -4.46}
+  m_Size: {x: 10, y: 2, z: 10}
+  m_Center: {x: 0, y: 1, z: 0}
