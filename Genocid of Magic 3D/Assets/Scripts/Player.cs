@@ -5,16 +5,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Transform playerTransform;
     static public Transform[] ActiveRoomArray;
-  
-  
     public float Speed = 5f;
-    private int ActivePoint;
+    static public int ActivePoint;
 
 
     private void GoToPoint()
     {
+
 
         if (ActivePoint < ActiveRoomArray.Length)
         {
@@ -24,17 +22,18 @@ public class Player : MonoBehaviour
             if (Vector3.Distance(transform.position, targetPoint.position) < 0.1f)
             {
                 ActivePoint++;
+                
             }
+       
         }
+        
     }
 
 
     void Start()
     {
-        playerTransform = GetComponent<Transform>();
-        
     }
-    
+
     void FixedUpdate()
     {
         GoToPoint();

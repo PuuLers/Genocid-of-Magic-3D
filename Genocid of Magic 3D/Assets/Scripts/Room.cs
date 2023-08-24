@@ -4,30 +4,23 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-   
-    
+
     public Transform[] Points;
-    
+
 
 
     public void SendingArray()
     {
         Player.ActiveRoomArray = Points;
     }
-    
 
 
-
-    private void Start()
-    {
-        
-    }
-
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            SendingArray();
+            Player.ActivePoint = 0;
+            Player.ActiveRoomArray = Points;
         }
     }
 
