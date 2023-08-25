@@ -7,8 +7,7 @@ public class Room : MonoBehaviour
 {
 
     public Transform[] Points;
-    public Transform[] SpawnPoints;
-    public GameObject[] Enemies;
+ 
 
 
 
@@ -27,21 +26,6 @@ public class Room : MonoBehaviour
         }
     }
     
-    void SpawnEnemies()
-    {
-        for (int i = 0; i < SpawnPoints.Length; i++)
-        {
-            int randEnemy = Random.Range(0, Enemies.Length);
-            int activePoints = 0;
-            new Vector3 = SpawnPoints[activePoints];
-            new Vector3 = SpawnPoints[activePoints];
-            Instantiate(Enemies[randEnemy], , Quaternion.identity);
-            activePoints =+ 1;
-            
-
-        }
-    }
-
 
 }
 

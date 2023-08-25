@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6226546620976166115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 833042133337646514}
+  - component: {fileID: 3858738379947893545}
+  m_Layer: 0
+  m_Name: SpawnPoint_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &833042133337646514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6226546620976166115}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3858738379947893545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6226546620976166115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd9063411dcd1e9439db39b2364c892f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyEasy:
+  - {fileID: 329822180735525419, guid: 4e8c5e0bb0ae98749948cf1031b4aef4, type: 3}
+  - {fileID: 384088396051113162, guid: d2df9e32671011740a828a386dc6e8ab, type: 3}
+  - {fileID: 6433895473363968985, guid: dd87912641f5c034881505084c219a72, type: 3}
+  EnemyMiddle:
+  - {fileID: 329822180735525419, guid: 4e8c5e0bb0ae98749948cf1031b4aef4, type: 3}
+  - {fileID: 384088396051113162, guid: d2df9e32671011740a828a386dc6e8ab, type: 3}
+  - {fileID: 6433895473363968985, guid: dd87912641f5c034881505084c219a72, type: 3}
+  - {fileID: 4585371614896504170, guid: faf7a7faedd1ba14bbf18abf55eca13d, type: 3}
+  - {fileID: 1446959422507467986, guid: 8f4fbbdf3f74b7f49ae4d94debe12474, type: 3}
+  - {fileID: 953016371603976390, guid: 74c93e1d399b7e042a29a6a05189a858, type: 3}
+  EnemyHard:
+  - {fileID: 4585371614896504170, guid: faf7a7faedd1ba14bbf18abf55eca13d, type: 3}
+  - {fileID: 1446959422507467986, guid: 8f4fbbdf3f74b7f49ae4d94debe12474, type: 3}
+  - {fileID: 953016371603976390, guid: 74c93e1d399b7e042a29a6a05189a858, type: 3}
