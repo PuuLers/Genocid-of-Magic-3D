@@ -21,13 +21,6 @@ public class LvlGenerator : MonoBehaviour
         }
     }
 
-
-
-
-
-
-
-
     void Start()
     {
         Generate();

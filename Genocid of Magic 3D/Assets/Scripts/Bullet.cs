@@ -13,4 +13,9 @@ public class Bullet : MonoBehaviour
         transform.Translate(Vector3.forward * Speed * Time.deltaTime);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        Destroy(gameObject);
+    }
+
 }
