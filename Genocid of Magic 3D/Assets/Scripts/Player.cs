@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(bullet, shotPoint.position, transform.rotation);
+            Instantiate(bullet, shotPoint.position, marker.rotation);
         }   
     }
 
@@ -57,11 +57,12 @@ public class Player : MonoBehaviour
         {
             Shoot();
         }
+        GoToPoint();
     }
 
     void FixedUpdate()
     {
-        //GoToPoint();
+        
         
     }
 }
