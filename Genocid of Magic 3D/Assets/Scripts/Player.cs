@@ -8,7 +8,9 @@ public class Player : MonoBehaviour
     static public Transform[] ActiveRoomArray;
     public float Speed = 5f;
     static public int ActivePoint;
-
+    public Transform marker;
+    public GameObject bullet;
+    public Transform shotPoint;
 
     private void GoToPoint()
     {
@@ -29,13 +31,37 @@ public class Player : MonoBehaviour
         
     }
 
+    protected void Rotate()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            gameObject.transform.rotation = marker.rotation;
+        }
+    }
+
+    private void Shoot()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(bullet, shotPoint.position, transform.rotation);
+        }   
+    }
 
     void Start()
     {
     }
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Shoot();
+        }
+    }
+
     void FixedUpdate()
     {
-        GoToPoint();
+        //GoToPoint();
+        
     }
 }
