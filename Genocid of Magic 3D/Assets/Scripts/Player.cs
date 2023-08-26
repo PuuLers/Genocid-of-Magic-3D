@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -11,6 +13,10 @@ public class Player : MonoBehaviour
     public Transform marker;
     public GameObject bullet;
     public Transform shotPoint;
+    public int bullets;
+    public int money;
+    public TextMeshPro bulletsText;
+    public TextMesh moneyText;
 
     private void GoToPoint()
     {
@@ -57,12 +63,14 @@ public class Player : MonoBehaviour
         {
             Shoot();
         }
-        GoToPoint();
+        bulletsText.text = bullets.ToString();
+        moneyText.text = money.ToString();
+
     }
 
     void FixedUpdate()
     {
-        
-        
+        GoToPoint();
+
     }
 }
