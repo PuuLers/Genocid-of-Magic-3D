@@ -63,14 +63,10 @@ public class Player : MonoBehaviour
         {
             Shoot();
         }
-        bulletsText.text = bullets.ToString();
-        moneyText.text = money.ToString();
-
-    }
-
-    void FixedUpdate()
-    {
+        //bulletsText.text = bullets.ToString();
+        //moneyText.text = money.ToString();
         GoToPoint();
-
     }
+
+ 
 }
