@@ -10,18 +10,18 @@ public class Player : MonoBehaviour
     static public Transform[] ActiveRoomArray;
     public float Speed = 5f;
     static public int ActivePoint;
-    public Transform marker;
+    public Transform markerTransform;
     public GameObject bullet;
     public Transform shotPoint;
     public int bullets;
     public int money;
     public TextMeshPro bulletsText;
     public TextMesh moneyText;
-
+    public bool GameMode = false;
+    public Animator CamAnim;
+    public GameObject Marker;
     private void GoToPoint()
     {
-
-
         if (ActivePoint < ActiveRoomArray.Length)
         {
             Transform targetPoint = ActiveRoomArray[ActivePoint];
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            gameObject.transform.rotation = marker.rotation;
+            gameObject.transform.rotation = markerTransform.rotation;
         }
     }
 
@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(bullet, shotPoint.position, marker.rotation);
+            Instantiate(bullet, shotPoint.position, markerTransform.rotation);
         }   
     }
 
@@ -59,13 +59,23 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && GameMode == false) 
+        {
+            CamAnim.Play("Camera_Start");
+            GameMode = true;
+        }
+        if (Input.GetMouseButtonDown(0) && GameMode == true)
         {
             Shoot();
         }
         //bulletsText.text = bullets.ToString();
         //moneyText.text = money.ToString();
-        GoToPoint();
+        if(GameMode == true)
+        {
+            Marker.SetActive(true);
+            GoToPoint();
+        }
+       
     }
 
  
