@@ -15,7 +15,20 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.CompareTag("Room"))
+        {
+            Destroy(gameObject);
+        }
     }
+
+
+
+
+
 
 }

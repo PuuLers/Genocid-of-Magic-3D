@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class Model : Player
 {
 
+
     void Update()
     {
         Rotate();

@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public bool GameMode = false;
     public Animator CamAnim;
     public GameObject Marker;
+    
     private void GoToPoint()
     {
         if (ActivePoint < ActiveRoomArray.Length)
