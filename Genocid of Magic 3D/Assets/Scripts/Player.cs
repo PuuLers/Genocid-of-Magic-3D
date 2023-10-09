@@ -50,13 +50,16 @@ public class Player : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(bullet, shotPoint.position, markerTransform.rotation);
+            //Instantiate(bullet, shotPoint.position, markerTransform.rotation);
+            RaycastHit hit;
+            if (Physics.Raycast(shotPoint.transform.position, shotPoint.transform.forward, out hit, 100))
+            {
+    
+            }
+
         }   
     }
 
-    void Start()
-    {
-    }
 
     private void Update()
     {
