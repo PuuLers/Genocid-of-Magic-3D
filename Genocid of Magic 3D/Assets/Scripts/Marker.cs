@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class Marker : MonoBehaviour
 {
-    [SerializeField] private float rotationSpeed = 10f;
+    [SerializeField] private float rotationSpeed = 5f;
 
     private void Update()
     {

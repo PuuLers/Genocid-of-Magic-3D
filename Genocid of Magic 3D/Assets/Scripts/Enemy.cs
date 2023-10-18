@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-
+        
     }
 
     private void OnCollisionEnter(Collision collision)
